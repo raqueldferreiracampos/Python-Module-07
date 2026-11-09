@@ -4,10 +4,6 @@ from ex0.factory import AquaFactory, CreatureFactory, FlameFactory
 from ex1.factory import HealingCreatureFactory, TransformCreatureFactory
 
 
-opponents = [(FlameFactory(), NormalStrategy()),
-             (HealingCreatureFactory(), DefensiveStrategy())]
-
-
 def battle(opponents: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
     print("*** Tournament ***")
     print(f"{len(opponents)} opponents involved")
@@ -21,9 +17,9 @@ def battle(opponents: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
                 print()
                 print("* Battle *")
                 print(creature_1.describe())
-                print("vs")
+                print(" vs")
                 print(creature_2.describe())
-                print("now fight!")
+                print(" now fight!")
                 strategy_1.act(creature_1)
                 strategy_2.act(creature_2)
 

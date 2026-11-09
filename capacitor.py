@@ -25,7 +25,7 @@ def testing_transformed_factory(transform_factory: CreatureFactory) -> None:
     print("base:")
     print(basic.describe())
     print(basic.attack())
-    print(cast(TransformCapability, basic).transform())
+    print(basic.transform())
     print(basic.attack())
     print(cast(TransformCapability, basic).revert())
     print("evolved:")
